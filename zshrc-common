@@ -1,0 +1,46 @@
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source virtualenvwrapper_lazy.sh
+
+# VIM keybindings
+bindkey -v 
+
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
+
+# Simple directory switching (without cd)
+setopt autocd
+
+# Better globbing (/**/* etc)
+setopt extendedglob
+
+alias ls="ls --color"
+
+alias -g ...="../.."
+alias -g ..2="../.."
+alias -g ....="../../.."
+alias -g ..3="../../.."
+alias -g .....="../../../.."
+alias -g ..4="../../../.."
+alias -g ......="../../../../.."
+alias -g ..5="../../../../.."
+alias -g .......="../../../../../.."
+alias -g ..6="../../../../../.."
+alias -g ........="../../../../../../.."
+alias -g ..7="../../../../../../.."
+alias -g .........="../../../../../../../.."
+alias -g ..8="../../../../../../../.."
+alias -g ..........="../../../../../../../../.."
+alias -g ..9="../../../../../../../../.."
+
+alias df="df -h"
+alias random='shuf -n 1 -i'
+alias pa='pass show -c'
+alias c='g++ -Wall -g -D_GLIBCXX_DEBUG -std=c++11 -ftrapv'
+alias kattisc='g++ -g -O2 -static -std=gnu++11'
+alias vim='e'
+alias nvim='e'
+alias mpy='python -ic "from math import *"'
+alias rm='rm -i'

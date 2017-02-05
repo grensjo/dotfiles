@@ -1,0 +1,29 @@
+set nocompatible
+filetype plugin indent on
+syntax on
+
+" set cursorline
+
+set bg=dark
+set tabstop=4
+set shiftwidth=4
+" set expandtab
+
+set smartcase
+set ignorecase
+set incsearch
+set hlsearch
+noremap <c-l> :nohlsearch<cr><c-l>
+
+" Swedish layout things
+noremap Ö :
+noremap ö :
+"noremap ; <
+"noremap : >
+
+noremap <tab> gt
+noremap <s-tab> gT
+noremap <c-p> <c-i>
+noremap - /
+
+set scrolloff=3

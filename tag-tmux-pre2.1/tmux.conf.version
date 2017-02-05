@@ -1,0 +1,4 @@
+# Mouse stuff pre 2.1
+setw -g mode-mouse on
+setw -g mouse-select-pane on
+setw -g mouse-select-window on

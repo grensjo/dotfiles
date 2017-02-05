@@ -1,0 +1,4 @@
+
+# Set variables here, which may be used in the rest of the config file
+set $workspace_hook /bin/true
+

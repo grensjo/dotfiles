@@ -1,0 +1,21 @@
+Plug 'junegunn/vim-plug'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-commentary'
+Plug 'SirVer/ultisnips'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Rip-Rip/clang_complete'
+
+"Plug 'vale1410/vim-minizinc'
+"Plug 'Valloric/YouCompleteMe'
+
+Plug 'vimwiki/vimwiki'
+
+Plug 'grensjo/tmuxline.vim'
+Plug 'honza/vim-snippets'

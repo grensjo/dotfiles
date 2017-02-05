@@ -1,0 +1,6 @@
+EXCLUDES="README.md LICENSE.md *.example"
+COPY_ALWAYS='**/*.timer **/*.service'
+TAGS=""
+DOTFILES_DIRS="$HOME/.dotfiles $HOME/.dotfiles-private"
+
+for f in ~/.rcrc.d/*; do source $f; done

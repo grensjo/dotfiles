@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -o pipefail
+set -o nounset
+
+mkdir -p ~/.vim/{autoload,plugged}
+
+if [ ! -d ~/.vim/plugged/vim-plug ]; then
+	echo "Installing vim-plug..."
+	git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug
+	ln -s ~/.vim/plugged/vim-plug/plug.vim ~/.vim/autoload
+	echo "Successfully installed vim-plug!"
+	echo ""
+fi
+

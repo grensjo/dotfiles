@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+source $HOME/.rcrc
+
+if [[ $TAGS == *"zplug"* ]]; then
+    if [ ! -d $HOME/.zplug ]; then
+      printf "Cloning zplug...\n"
+      hash git >/dev/null 2>&1 || {
+        echo "Error: git is not installed"
+        exit 1
+      }
+      TMPDIR=`mktemp -d -t zplug-install-XXXXXXX`
+      env git clone --depth 1 https://github.com/zplug/zplug "$TMPDIR" || {
+        printf "Error: git clone of zplug repo failed\n"
+        exit 1
+      }
+      source "$TMPDIR/init.zsh"
+      zplug "zplug/zplug"
+      zplug install
+    fi
+fi

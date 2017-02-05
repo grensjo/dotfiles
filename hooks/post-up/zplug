@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+source $HOME/.rcrc
+
+if [[ $TAGS == *"zplug"* ]]; then
+    ((`ls $HOME/.zplug/repos | wc -l` > 1)) || {
+        source $HOME/.zshrc
+        zplug install
+        zplug clean
+        zplug clear
+    }
+fi

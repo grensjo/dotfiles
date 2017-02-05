@@ -1,0 +1,15 @@
+# Color definitions
+set_from_resource $background background #000000
+set_from_resource $foreground foreground #000000
+set_from_resource $primary primary #000000
+set_from_resource $black color0 #000000
+set_from_resource $darkgray color8 #000000
+set_from_resource $red color1 #000000
+set_from_resource $green color2 #000000
+set_from_resource $yellow color3 #000000
+set_from_resource $blue color4 #000000
+set_from_resource $darkblue color12 #000000
+set_from_resource $magenta color5 #000000
+set_from_resource $cyan color6 #000000
+set_from_resource $lightgray color7 #000000
+

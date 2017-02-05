@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Script for quickly connecting to a remote machine and either
+# opening an existing tmux session or creating a new one.
+
+mosh $@ -- tmux new-session -A -s main

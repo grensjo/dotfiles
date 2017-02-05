@@ -1,0 +1,14 @@
+[Added Associations]
+application/pdf=evince.desktop;
+text/less=org.gnome.gedit.desktop;
+image/jpeg=eog.desktop;feh.desktop;
+text/x-python=org.gnome.gedit.desktop;
+text/x-c++src=org.gnome.gedit.desktop;
+text/plain=org.gnome.gedit.desktop;
+image/gif=eog.desktop;
+image/png=eog.desktop;
+
+[Default Applications]
+image/jpeg=eog.desktop
+image/gif=eog.desktop
+image/png=eog.desktop
