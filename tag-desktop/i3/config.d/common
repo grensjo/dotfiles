@@ -248,3 +248,6 @@ bindsym $mod+q mode "$mode_system"
 
 # Sleep shortcut
 bindsym $mod+Shift+s exec sudo pm-suspend
+
+# Compton
+exec --no-startup-id compton --xrender-sync --xrender-sync-fence --no-fading-openclose --inactive-opacity-override -i 0.95
