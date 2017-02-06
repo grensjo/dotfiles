@@ -16,6 +16,13 @@ setopt autocd
 # Better globbing (/**/* etc)
 setopt extendedglob
 
+# Completation settings
+unsetopt menu_complete
+setopt auto_menu
+setopt complete_in_word
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*' # Hyphen insensitive
+zstyle ':completion:*' menu select
+
 alias ls="ls --color"
 
 alias -g ...="../.."
