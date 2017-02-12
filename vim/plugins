@@ -19,4 +19,5 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'grensjo/tmuxline.vim'
 Plug 'honza/vim-snippets'
-Plug 'christoomey/vim-tmux-navigator'
+"Plug 'christoomey/vim-tmux-navigator'
+Plug 'FredKSchott/CoVim'
