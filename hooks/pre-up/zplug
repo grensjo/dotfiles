@@ -3,7 +3,7 @@
 source $HOME/.rcrc
 
 if [[ $TAGS != *"oh-my-zsh"* ]]; then
-    if [ ! -d $HOME/.zplug ]; then
+    if [ ! -d $HOME/.zplug/repos/zplug ]; then
       printf "Cloning zplug...\n"
       hash git >/dev/null 2>&1 || {
         echo "Error: git is not installed"
