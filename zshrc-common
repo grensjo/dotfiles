@@ -51,3 +51,32 @@ alias vim='e'
 alias nvim='e'
 alias mpy='python -ic "from math import *"'
 alias rm='rm -i'
+
+# including this ensures that new gnome-terminal tabs keep the parent `pwd` !
+if [ -e /etc/profile.d/vte.sh ]; then
+    . /etc/profile.d/vte.sh
+fi
+
+prompt_no_history() {
+  if [ -z "$HISTFILE" ]; then
+    prompt_segment black white "Private"
+  fi
+}
+
+export BULLETTRAIN_PROMPT_ORDER=(
+  time
+  status
+  custom
+  no_history
+  context
+  dir
+  perl
+  ruby
+  virtualenv
+  nvm
+  go
+  git
+  hg
+  cmd_exec_time
+)
+
