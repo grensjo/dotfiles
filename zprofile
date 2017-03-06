@@ -27,9 +27,7 @@ export PAGER='less'
 # Language
 #
 
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
+export LANG='en_US.UTF-8'
 
 #
 # Paths
@@ -80,7 +78,7 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 #
-# Default user
+# Bullettrain config
 #
 export BULLETTRAIN_CONTEXT_DEFAULT_USER=grensjo
 

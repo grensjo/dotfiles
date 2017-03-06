@@ -70,13 +70,8 @@ export BULLETTRAIN_PROMPT_ORDER=(
   no_history
   context
   dir
-  perl
-  ruby
   virtualenv
-  nvm
-  go
   git
-  hg
   cmd_exec_time
 )
 

@@ -1,0 +1,4 @@
+# Zsh theme colors
+BULLETTRAIN_DIR_BG='white'
+BULLETTRAIN_DIR_FG='black'
+BULLETTRAIN_IS_SSH_CLIENT='true'
