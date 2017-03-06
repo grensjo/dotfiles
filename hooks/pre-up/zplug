@@ -2,7 +2,7 @@
 
 source $HOME/.rcrc
 
-if [[ $TAGS == *"zplug"* ]]; then
+if [[ $TAGS != *"oh-my-zsh"* ]]; then
     if [ ! -d $HOME/.zplug ]; then
       printf "Cloning zplug...\n"
       hash git >/dev/null 2>&1 || {

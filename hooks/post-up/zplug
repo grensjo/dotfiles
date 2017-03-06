@@ -2,7 +2,7 @@
 
 source $HOME/.rcrc
 
-if [[ $TAGS == *"zplug"* ]]; then
+if [[ $TAGS != *"oh-my-zsh"* ]]; then
     ((`ls $HOME/.zplug/repos | wc -l` > 1)) || {
         source $HOME/.zshrc
         zplug install
