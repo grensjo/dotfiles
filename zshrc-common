@@ -1,6 +1,9 @@
 # Virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-source virtualenvwrapper_lazy.sh
+if [ -f virtualenvwrapper_lazy.sh ]
+then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source virtualenvwrapper_lazy.sh
+fi
 
 # VIM keybindings
 bindkey -v 
