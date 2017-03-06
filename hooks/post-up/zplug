@@ -4,6 +4,7 @@ source $HOME/.rcrc
 
 if [[ $TAGS != *"oh-my-zsh"* ]]; then
     ((`ls $HOME/.zplug/repos | wc -l` > 1)) || {
+        export LANG=en_US.UTF-8
         source $HOME/.zshrc
         zplug install
         zplug clean
