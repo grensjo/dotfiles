@@ -86,6 +86,7 @@ fi
 # Bullettrain config
 #
 export BULLETTRAIN_CONTEXT_DEFAULT_USER=grensjo
+export BULLETTRAIN_EXEC_TIME_BG=white
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
