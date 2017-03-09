@@ -13,6 +13,8 @@ set expandtab
 au BufRead,BufNewFile */git/aiprojekt/*.cpp setlocal noexpandtab
 au BufRead,BufNewFile */git/aiprojekt/*.h setlocal noexpandtab
 
+au BufRead,BufNewFile *.yml setlocal tabstop=2 shiftwidth=2
+
 set smartcase
 set ignorecase
 set incsearch
