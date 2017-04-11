@@ -2,6 +2,8 @@
 #   https://gist.github.com/octocat/9257657
 #   https://github.com/github/gitignore/
 
+/tmp
+
 # VIM #
 ###################
 
@@ -21,10 +23,7 @@ tags
 
 # Compiled source #
 ###################
-*.com
 *.class
-*.dll
-*.exe
 *.o
 *.so
 
