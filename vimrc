@@ -1,20 +1,31 @@
+""" Disable VI compatibility
 set nocompatible
-filetype plugin indent on
-syntax on
 
-" set cursorline
+""" Colors
+set bg=dark     " use colors reasonable for a dark terminal background
+syntax on       " enable syntax highlighting
 
-set bg=dark
-set tabstop=4
-set shiftwidth=4
-set expandtab
+""" Indentation
+filetype plugin indent on   " load filetype-specific indent files and plugins
+set tabstop=4           " Number of visual spaces per tab   
+set softtabstop=4       " Number of spaces in tab when editing
+set shiftwidth=4        " Number of spaces text is shifted with << and >>
+set expandtab           " Tabs are spaces
 
-" Set noexpandtab for a specific project
+""" Project-specific settings
 au BufRead,BufNewFile */git/aiprojekt/*.cpp setlocal noexpandtab
 au BufRead,BufNewFile */git/aiprojekt/*.h setlocal noexpandtab
+au BufRead,BufNewFile *.yml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
-au BufRead,BufNewFile *.yml setlocal tabstop=2 shiftwidth=2
 
+""" UI 
+set showcmd             " show latest command in bottom bar
+set wildmenu			" show graphical menu of tab completations in bottom bar
+" set cursorline        " highlight current line (TODO make it look good)
+" set number            " show line numbers to the left (TODO make it look good)
+" set relativenumber
+
+""" Searching
 set smartcase
 set ignorecase
 set incsearch
