@@ -192,7 +192,7 @@ exec xset b off
 bindsym $mod+x move workspace to output right
 bindsym $mod+Shift+x move workspace to output left
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="Keybase"] floating enable
@@ -203,8 +203,9 @@ for_window [title="Onboard"] border pixel 0
 for_window [title="touchcontrol" window_role="browser-window"] floating enable, move position -1px 24px, sticky enable, border pixel 0, move scratchpad
 exec --no-startup-id touchcontrol --enable-transparent-visuals
 
-gaps inner 20
-smart_gaps on
+# redshift
+exec --no-startup-id redshift
+
 smart_borders on
 
 
@@ -249,5 +250,7 @@ bindsym $mod+q mode "$mode_system"
 # Sleep shortcut
 bindsym $mod+Shift+s exec sudo pm-suspend
 
-# Compton
-exec --no-startup-id compton --xrender-sync --xrender-sync-fence --no-fading-openclose --inactive-opacity-override -i 0.95
+# Screenshot
+bindsym Print exec screenshot
+
+bindsym $mod+m resize shrink width; resize shrink width; resize shrink width
