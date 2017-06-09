@@ -10,7 +10,7 @@
 #
 
 if [ -n "$DISPLAY" ]; then
-    export BROWSER=firefox
+    export BROWSER=qute
 else
     export BROWSER=elinks
 fi
