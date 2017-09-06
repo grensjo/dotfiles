@@ -16,7 +16,7 @@ if [[ $TAGS != *"oh-my-zsh"* ]]; then
       }
       export LANG=en_US.UTF-8
       source "$TMPDIR/init.zsh"
-      zplug "zplug/zplug"
+      zplug "zplug/zplug", hook-build:"zplug --self-manage"
       zplug install
     fi
 fi
