@@ -1,0 +1,23 @@
+############################
+####### Formats etc. #######
+############################
+
+set send_charset="us-ascii:utf-8"
+set print_decode = yes
+set pipe_decode = yes
+
+alternative_order text/plain text/enriched text/html
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+
+
+########################
+####### Contacts #######
+########################
+
+set query_command= "khard email --parsable --search-in-source-files %s"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
+
+# vim: set ft=muttrc:

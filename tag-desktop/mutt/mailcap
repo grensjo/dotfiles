@@ -1,0 +1,4 @@
+text/html; mv %s %s.html && qutebrowser --backend webengine %s.html >/dev/null 2>/dev/null
+text/html; iconv -t utf-8 -f %{charset} | pandoc --from html --to markdown-raw_html-native_divs-native_spans-bracketed_spans-escaped_line_breaks-blank_before_blockquote --reference-links; copiousoutput;
+application/*; mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; xdg-open /tmp/mutt/$(basename %s) &>/dev/null &
+image/*; mkdir -p /tmp/mutt \; cp %s /tmp/mutt \; xdg-open /tmp/mutt/$(basename %s) &>/dev/null &

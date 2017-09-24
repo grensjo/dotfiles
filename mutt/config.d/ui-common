@@ -1,0 +1,20 @@
+##############################
+####### User Interface #######
+##############################
+
+# Sorting
+set sort=reverse-threads
+set sort_aux=last-date-received
+
+# Ask if you mentioned a nonexistent attachment
+set abort_noattach = "ask-yes"
+set attach_keyword = "\\<(attach(|ed|ments?)|bifoga(|d|de|t)|bilag(a|an|or|orna))\\>"
+
+# Automatically refresh inbox every 15 seconds.
+set timeout=15
+
+# These headers are hidden by default, but I want to see them.
+unignore x-forwarded-to x-forwarded-for
+
+
+# vim: set ft=muttrc:

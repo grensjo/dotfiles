@@ -1,0 +1,14 @@
+############################
+####### Cryptography #######
+############################
+
+# You should copy this file from /usr/share/doc/mutt/samples/gpg.rc
+source ~/.mutt/gpg.rc
+set pgp_use_gpg_agent = yes
+set pgp_sign_as = 96210AEEC6414D63
+# set crypt_autosign = yes
+
+# PGP/INLINE:
+# set pgp_create_traditional = yes
+
+# vim: set ft=muttrc:

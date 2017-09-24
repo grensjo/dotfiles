@@ -1,0 +1,68 @@
+##
+## Keybindings for all my mutt instances
+##
+
+# Actions
+bind index,pager r  noop
+bind index,pager ro reply   # Reply only to sender
+bind index,pager rr group-reply     # Reply all
+bind index,pager rl list-reply     # Reply to list
+bind index,pager,attach <BackSpace> display-toggle-weed     # I.e. <ctrl-h>
+bind index          \CL limit # view only regex stuff
+bind index          U   toggle-new
+bind pager          U   mark-as-new
+bind index,pager,browser    N   search-opposite
+
+
+# Search (backwards search using ?, help with Ctrl+_)
+bind generic \C? help
+bind generic \C_ help
+bind generic,pager,browser,index,attach \C? help
+bind generic,pager,browser,index,attach \C_ help
+bind generic,pager,browser,index,attach ? search-reverse
+
+# Scrolling
+bind attach,browser,pager,index \CF next-page
+bind attach,browser,pager,index \CB previous-page
+bind attach,browser,pager,index \Cu half-up
+bind attach,browser,pager,index \Cd half-down
+bind browser,pager              \Ce next-line
+bind browser,pager              \Cy previous-line
+bind index                      \Ce next-line
+bind index                      \Cy previous-line
+bind attach,browser,index   H top-page
+bind attach,browser,index   L bottom-page
+bind attach,browser,index   M middle-page
+
+# Moving around
+bind attach,browser,index   g   noop
+bind attach,browser,index   gg  first-entry
+bind attach,browser,index   G   last-entry
+macro index          h '<change-folder>?'
+bind  generic  l select-entry
+bind index l select-entry
+
+bind pager                  g   noop
+bind pager                  gg  top
+bind pager                  G   bottom
+bind pager                  h exit
+bind pager                  j next-line
+bind pager                  k previous-line
+bind pager                  l view-attachments
+
+bind attach,compose l view-attach
+bind attach         h exit
+
+# unbinding <Up> and <Down> to avoid scroll wheel problems
+bind generic,compose,attach,pager,index <Up> noop
+bind generic,compose,attach,pager,index <Down> noop
+
+# unbinding x and i because only one key is enough
+bind generic,compose,attach,pager,index i noop
+bind generic,compose,attach,pager,index x noop
+
+# binding q for exiting all menus
+bind generic,compose,attach,pager q exit
+
+
+# vim: set ft=muttrc:

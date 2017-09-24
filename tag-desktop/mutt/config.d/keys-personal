@@ -1,0 +1,15 @@
+##
+## Keybindings specifically for my personal email inbox
+## (assumes existance of Archive and Trash folders)
+##
+
+bind index,pager d  noop
+# Archive tagged messages, or current if there are no tagged messages
+macro index dd ":set confirmappend=no delete=yes\n<tag-prefix><save-message>=Archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+macro pager dd ":set confirmappend=no delete=yes\n<save-message>=Archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+macro index D ":set confirmappend=no delete=yes\n<tag-prefix><save-message>=Trash\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+macro pager D ":set confirmappend=no delete=yes\n<save-message>=Trash\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+# bind pager,index D delete-message       # Capital D to actually delete something
+
+
+# vim: set ft=muttrc:
