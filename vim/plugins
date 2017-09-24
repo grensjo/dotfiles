@@ -24,3 +24,4 @@ Plug 'FredKSchott/CoVim'
 
 Plug 'cespare/vim-toml'
 " Plug 'sjl/badwolf'
+Plug 'rust-lang/rust.vim'

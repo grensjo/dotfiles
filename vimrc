@@ -32,13 +32,9 @@ set incsearch
 set hlsearch
 noremap <c-l> :nohlsearch<cr><c-l>
 
-" Swedish layout things
-noremap Ö :
-noremap ö :
-"noremap ; <
-"noremap : >
+set mouse=a
 
-noremap ; :
+" noremap ; :
 
 noremap <tab> gt
 noremap <s-tab> gT
@@ -49,10 +45,10 @@ imap <f1> <esc>
 
 set scrolloff=3
 
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
+" nnoremap <silent> [b :bprevious<CR>
+" nnoremap <silent> ]b :bnext<CR>
+" nnoremap <silent> [B :bfirst<CR>
+" nnoremap <silent> ]B :blast<CR>
 
 
 "LaTeX things
