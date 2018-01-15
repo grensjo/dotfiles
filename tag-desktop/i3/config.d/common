@@ -110,34 +110,34 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1 www; exec $workspace_hook
-bindsym $mod+2 workspace 2 tools; exec $workspace_hook
-bindsym $mod+3 workspace 3 kth; exec $workspace_hook
-bindsym $mod+4 workspace 4; exec $workspace_hook
-bindsym $mod+5 workspace 5; exec $workspace_hook
-bindsym $mod+6 workspace 6; exec $workspace_hook
-bindsym $mod+7 workspace 7; exec $workspace_hook
-bindsym $mod+8 workspace 8 www2; exec $workspace_hook
-bindsym $mod+9 workspace 9 free; exec $workspace_hook
-bindsym $mod+0 workspace 10 chat; exec $workspace_hook
-bindsym $mod+F10 workspace W; exec $workspace_hook
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+F10 workspace
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1 www
-bindsym $mod+Shift+2 move container to workspace 2 tools
-bindsym $mod+Shift+3 move container to workspace 3 kth
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8 www2
-bindsym $mod+Shift+9 move container to workspace 9 free
-bindsym $mod+Shift+0 move container to workspace 10 chat
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+F10 move container to workspace W
 
 # next/prev workspace
-bindsym $mod+Left exec i3-msg workspace prev; exec $workspace_hook
-bindsym $mod+Right workspace next; exec $workspace_hook
+bindsym $mod+Left exec i3-msg workspace prev
+bindsym $mod+Right workspace next
 bindsym $mod+Shift+Left move container to workspace prev
 bindsym $mod+Shift+Right move container to workspace next
 
@@ -175,14 +175,17 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Screen lock
-exec --no-startup-id xautolock -time 5 -locker "i3lock-fancy" -notify 10 -notifier "notify-send -t 1000 -u critical 'Locking screen...'" -corners 00-+ -cornerdelay 5 -cornerredelay 60
-set $Locker xautolock -locknow && sleep 1
+exec --no-startup-id autolock
+set $Locker xautolock -locknow
 
 # Background
 exec --no-startup-id sh -c 'feh --no-fehbg --bg-fill $HOME/.wallpaper/*'
 
+# Keybase
+exec --no-startup-id run_keybase
+
 # Map caps lock to escape
-exec setxkbmap gb -option caps:escape
+exec setxkbmap gb-anton -option caps:escape
 # bindsym Control+bracketleft exec --no-startup-id xdotool key --clearmodifiers aring
 
 # Turn off bell
@@ -198,10 +201,10 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="Keybase"] floating enable
 for_window [title="Untitled"] floating disable
 for_window [title="Electron launcher"] floating enable
+for_window [class="pinentry"] floating enable
 for_window [title="Untitled"] new_window none
 for_window [title="Onboard"] border pixel 0
-for_window [title="touchcontrol" window_role="browser-window"] floating enable, move position -1px 24px, sticky enable, border pixel 0, move scratchpad
-exec --no-startup-id touchcontrol --enable-transparent-visuals
+for_window [class="Osdlyrics"] floating enable
 
 # redshift
 exec --no-startup-id redshift
