@@ -57,6 +57,7 @@ alias nvim='e'
 alias mpy='python -ic "from math import *"'
 alias rm='rm -i'
 alias rlist='task rc:~/.rlistrc'
+alias mutt='neomutt'
 
 # including this ensures that new gnome-terminal tabs keep the parent `pwd` !
 if [ -e /etc/profile.d/vte.sh ]; then

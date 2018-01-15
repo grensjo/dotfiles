@@ -20,4 +20,9 @@ bind editor <Tab> complete-query
 bind editor ^T    complete
 
 
+#######################
+####### Various #######
+#######################
+set tmpdir = '/tmp/mutt'
+
 # vim: set ft=muttrc:
