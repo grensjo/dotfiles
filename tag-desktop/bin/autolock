@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+xautolock -time 5 -locker "pixellock" -notify 10 -notifier "notify-send -t 1000 -u critical 'Locking screen...'" -corners 00-+ -cornerdelay 5 -cornerredelay 60
