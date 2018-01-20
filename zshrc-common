@@ -29,6 +29,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 zstyle ':completion:*' menu select
 
 alias ls="ls --color"
+alias mv="mv -i"
 
 alias -g ...="../.."
 alias -g ..2="../.."
