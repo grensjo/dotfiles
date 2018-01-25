@@ -1,0 +1,8 @@
+#!/bin/bash
+# An ugly hack for running gnome-terminal in a blocking way.  I use it to be able to
+# use vim as editor in qutebrowser (if the editor command exits immediately,
+# qutebrowser will think the editing process has finished).
+FILE=$(mktemp)
+touch "${FILE}"
+gnome-terminal -- bash -c "${@} && rm ${FILE}"
+inotifywait "${FILE}"

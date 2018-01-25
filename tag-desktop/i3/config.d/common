@@ -254,6 +254,6 @@ bindsym $mod+q mode "$mode_system"
 bindsym $mod+Shift+s exec sudo pm-suspend
 
 # Screenshot
-bindsym Print exec screenshot
+bindsym Print exec gnome-screenshot -i
 
 bindsym $mod+m resize shrink width; resize shrink width; resize shrink width
