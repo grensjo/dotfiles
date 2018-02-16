@@ -4,6 +4,7 @@ set nocompatible
 """ Colors
 set bg=dark     " use colors reasonable for a dark terminal background
 syntax on       " enable syntax highlighting
+highlight LineNr ctermfg=grey
 
 """ Indentation
 filetype plugin indent on   " load filetype-specific indent files and plugins
@@ -22,8 +23,8 @@ au BufRead,BufNewFile *.yml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 set showcmd             " show latest command in bottom bar
 set wildmenu			" show graphical menu of tab completations in bottom bar
 " set cursorline        " highlight current line (TODO make it look good)
-" set number            " show line numbers to the left (TODO make it look good)
-" set relativenumber
+set number            " show line numbers to the left (TODO make it look good)
+set relativenumber
 
 """ Searching
 set smartcase
